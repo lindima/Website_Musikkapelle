@@ -1,0 +1,380 @@
+* 
+{
+	padding: 0;
+	margin: 0;
+}
+
+.body
+{
+	background-size: cover;
+	font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+@font-face { font-family: 'music-font';
+             src: url('../Schriften/Aesop-RegularItalic.ttf') format('truetype'); }
+			 
+@font-face { font-family: 'music-font2';
+             src: url('../Schriften/Advantage-Book.ttf') format('truetype'); }
+
+.logo
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 11;
+	width: 10em;
+}
+
+@media screen and (min-width: 35.001em) {
+.logo
+{
+	width: 12em;
+}
+}
+
+@media screen and (min-width: 70.001em) {
+.logo
+{
+	width: 12em;
+}
+}
+
+.logo img
+{
+	width: 100%;
+}
+
+.navbar
+{
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	float: center;
+	position: fixed;
+	background-color: white;
+	z-index: 1;
+	color: #B40404;
+	font-weight: bold;
+	font-size: 1.5em;
+	text-decoration: none;
+	-webkit-box-shadow: 0 0 10px #fff;
+        box-shadow: 0 0 30px black;
+	text-align: center;
+}
+
+.navbar ul
+{
+	display: none;
+}
+
+@media screen and (min-width: 70.001em) {
+.navbar ul
+{
+	display: inline-block;
+	list-style: none;
+}
+}
+
+.navbar li
+{
+	display: inline-block;
+	text-align: center;
+	width: 10vw;
+	padding: 0.8vw 0.5vw;
+	transition: background-color 0.5s;
+	font-family: music-font2, Helvetica, CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+#place
+{
+	width: 10vw;
+	padding: 0;
+	margin: 0;
+}
+
+.navbar li:hover
+{
+	cursor: pointer;
+}
+
+.navbar p
+{
+	color: white;
+}
+
+.real
+{
+	background-color: white;
+	transition: background-color 0.2s;
+}
+
+.real:hover
+{
+	background-color: #f2f2f2;
+	cursor: pointer;
+}
+
+.active
+{
+	background-color: #610B0B;
+	color: white;
+	transition: background-color 0.5s;
+}
+
+.active:hover
+{
+	background-color: #913B3B;
+}
+
+.nav_menu_icon
+{
+	float: right;
+	width: 1.5em;
+}
+
+@media screen and (min-width: 35.001em) {
+.nav_menu_icon
+{
+	float: right;
+	width: 2em;
+}
+}
+
+@media screen and (min-width: 70.001em) {
+.nav_menu_icon
+{
+	display: none;
+}
+}
+
+.nav_menu_icon img
+{
+	width: 100%;
+	transition: all 0.2s;
+}
+
+.nav_menu_icon img:hover
+{
+	cursor: pointer;
+	transform: rotate(360deg);
+}
+
+.nav_menu
+{
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	width: 70vw;
+	background-color: white;
+	z-index: 12;
+	font-size: 1.7em;
+	font-family: music-font2, Helvetica, CenturyGothic, Geneva, AppleGothic, sans-serif;
+	-webkit-box-shadow: 0 0 10px #fff;
+        box-shadow: 0 0 30px black;
+	overflow: auto;
+}
+
+@media screen and (min-width: 70.001em) {
+.nav_menu
+{
+	display: none;
+}
+}
+
+.link
+{
+	margin-right: 0.5em;
+	border-bottom: 2px solid #610B0B;
+}
+
+.link p
+{
+	padding-left: 1em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	color: #64646c;
+}
+
+#contact1
+{
+	border-left: 15px solid #610B0B;
+}
+
+.wrapper
+{
+	position: relative;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 75em;
+	top: 0;
+	background-color: white;
+	-webkit-box-shadow: 0 0 10px #fff;
+        box-shadow: 0 0 30px black;
+}
+
+.information
+{
+	grid-area: info;
+	width: 80%;
+	margin: auto;
+	margin-top: 20vh;
+	margin-bottom: 20vh;
+}
+
+.information h1
+{
+	text-align: center;
+	font-size: 38px;
+	margin-bottom: 2vh;
+	font-family: music-font2, Helvetica, CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+.information p
+{
+	text-align: center;
+	font-size: 21px;
+	font-family: music-font2, Helvetica, CenturyGothic, Geneva, AppleGothic, sans-serif;
+	color: #64646c;
+	font-weight: bold;
+}
+
+.footer
+{
+	grid-area: foot;
+	width: 100%;
+	margin-left: 0.01vw;
+}
+
+.music
+{
+	background-color: #333339;
+}
+
+.music table
+{
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	table-layout: fixed;
+	width: 100%;
+}
+
+@media screen and (min-width: 35.001em) { 
+.music table
+{
+	padding-left: 5em;
+	padding-right: 5em;
+}
+}
+
+.music td.over
+{
+	width: 60%;
+	vertical-align: top;
+}
+
+.music td.contact
+{
+	width: 40%;
+	vertical-align: top;
+}
+
+.music h1
+{
+	font-size: 21px;
+	color: #EEE;
+	margin-bottom: 3%;
+	font-weight: bold;
+	font-family: music-font2, CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+.music p
+{
+	font-size: 15px;
+	color: #EEE;
+	font-family: music-font2, CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+.formally
+{
+	background-color: #222229;
+}
+
+.formally table
+{
+	padding-left: 1em;
+	padding-right: 1em;
+	table-layout: fixed;
+	width: 100%;
+}
+
+@media screen and (min-width: 35.001em) { 
+.formally table
+{
+	padding-left: 5em;
+	padding-right: 5em;
+}
+}
+
+.formally ul
+{
+	list-style: none;
+}
+
+.formally li
+{
+	display: inline-block;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-right: 1em;
+}
+
+.formally a
+{
+	text-decoration: none;
+	color: #EEE;
+	font-size: 1em;
+	font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+.formally td.left
+{
+	width: 60%;
+}
+
+.formally td.right
+{
+	width: 40%;
+}
+
+.grid_content
+{
+	position: relative;
+	top: 0;
+	padding-top: 0;
+		
+	grid-area: grid_content;
+	display: grid;
+	margin: 0 auto;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-row: 1fr 1fr 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	grid-template-areas:
+		"info info info info info"
+		"foot foot foot foot foot"
+}
+
+@media screen and (min-width: 35.001em) {
+.grid_content
+{
+	padding-top: 10em;
+}
+}

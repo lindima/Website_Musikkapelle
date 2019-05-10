@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+
+<html lang="en" >
+	<head>
+	
+		<meta charset="utf-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="style_gigs.css" type="text/css" >
+		
+		<title>Termine</title>
+		
+		<script src="../JScript/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			
+				var resolutionWidth = window.screen.availWidth;
+				$(".nav_menu").animate({width: 'toggle'}, 200);
+				$(".nav_menu").css("display", "none");
+				
+				$("#start").click(function(){
+					window.location.href = '../index.html';
+				});
+				
+				$("#about").click(function(){
+					window.location.href = 'about.html';
+				});
+				
+				$("#gigs").click(function(){
+					window.location.href = 'gigs.html';
+				});
+				
+				$("#contact").click(function(){
+					window.location.href = 'contact.html';
+				});
+				
+				$("#galery").click(function(){
+					window.location.href = 'galery.html';
+				});
+				
+				$("#history").click(function(){
+					window.location.href = 'history.html';
+				});
+				
+				$("#start1").click(function(){
+					window.location.href = '../index.html';
+				});
+				
+				$("#about1").click(function(){
+					window.location.href = 'about.html';
+				});
+				
+				$("#gigs1").click(function(){
+					window.location.href = 'gigs.html';
+				});
+				
+				$("#contact1").click(function(){
+					window.location.href = 'contact.html';
+				});
+				
+				$("#galery1").click(function(){
+					window.location.href = 'galery.html';
+				});
+				
+				$("#history1").click(function(){
+					window.location.href = 'history.html';
+				});
+				
+				$("#menu_icon").click(function(){
+					$(".nav_menu").animate({width: 'toggle'}, 200);
+				});
+			});
+		</script>
+		
+	</head>
+	
+	<body style="background-image: url('../images/test8.jpg'); background-attachment: fixed; background-size: cover;" >
+		
+		<div class="navbar" >
+			<ul>
+				<li id="start" class="real" >Startseite</li>
+				<li id="about" class="real" >Über uns</li>
+				<li id="gigs" class="active" >Termine</li>
+				<li id="place" ></li>
+				<li id="contact" class="real" >Kontakt</li>
+				<li id="galery" class="real" >Galerie</li>
+				<li id="history" class="real" >Historie</li>
+			</ul>
+			
+			<div class="nav_menu_icon" id="menu_icon" >
+				<img src="../images/menu.png" alt="menu" /> 
+			</div>
+		</div>
+		
+		<div class="nav_menu" >			
+			<div id="start1" class="link real" >
+				<p>Startseite</p>
+			</div>
+			
+			<div id="about1" class="link real" >
+				<p>Über uns</p>
+			</div>
+			
+			<div id="gigs1" class="link real" >
+				<p>Termine</p>
+			</div>
+			
+			<div id="contact1" class="link real" >
+				<p>Kontakt</p>
+			</div>
+			
+			<div id="galery1" class="link real" >
+				<p>Galerie</p>
+			</div>
+			
+			<div id="history1" class="link real" >
+				<p>Historie</p>
+			</div>
+		</div>
+		
+		<div class="logo" >
+			<img src="../images/logo.png" alt="LOGO" />
+		</div>
+		
+		<div class="wrapper" >
+			<div class="grid_content" >
+				
+				<div class="gigs" >
+					<h1>Auftritte und Termine 2019 und 2020</h1>
+					<div class="gig" >
+						<p>05.01.2019: Preis-Cego, im Rathauskeller Siensbach</p>
+					</div>
+					<div class="gig" >
+						<p>12.01.2019: JHV, Festhalle Siensbach</p>
+					</div>
+					<div class="gig" >
+						<p>24.02.2019: Umzug Buchholz für Wilde Männer, Buchholz</p>
+					</div>
+					<div class="gig" >
+						<p>28.02.2019: Schmutzige Dunschtig Umzug, Waldkirch</p>
+					</div>
+					<div class="gig" >
+						<p>03.03.2019: Umzug Fasnetsundig mit Wilde Männer, Waldkirch</p>
+					</div>
+					<div class="gig" >
+						<p>27.04.2019: Papiersammlung, Hallenparkplatz 14.00 Uhr</p>
+					</div>
+					<div class="gig" >
+						<p>01.05.2019: Maianblasen, Siensbach 6.00 Uhr</p>
+					</div>
+					<div class="gig" >
+						<p>03.-05.05.2019: Probe-WE für Open-Air-Konzert, Jugendherberge Todtnauberg</p>
+					</div>
+					<div class="gig" >
+						<p>19.05.2019: Erstkommunion Siensbach, Siensbach 9.45 Uhr</p>
+					</div>
+					<div class="gig" >
+						<p>19.05.2019: Open-Air Gutach, Gutach 12.00 Uhr</p>
+					</div>
+					<div class="gig" >
+						<p>30.05.2019: Christi Himmelfahrt Prozession, Siensbach</p>
+					</div>
+					<div class="gig" >
+						<p>01.06.2019: Großes Konzert Hochdorf, Hochdorf</p>
+					</div>
+					<div class="gig" >
+						<p>21. & 22.06.2019: Aufbau Gartenfest</p>
+					</div>
+					<div class="gig" >
+						<p>28.06. & 29.06.2019: Aufbau Gartenfest</p>
+					</div>
+					<div class="gig" >
+						<p>01.07.2019-04.07.2019: Aufbauwoche Gartenfest</p>
+					</div>
+					<div class="gig marked" >
+						<p>05.-08.07.2019: Gartenfest, Siensbach</p>
+					</div>
+					<div class="gig" >
+						<p>09. & 10.07.2019: Abbautage Gartenfest</p>
+					</div>
+					<div class="gig" >
+						<p>24.07.2019: Campingplatz, Siensbach</p>
+					</div>
+					<div class="gig" >
+						<p>28.07.2019: Glottertal, 14.30 Uhr - 16.30 Uhr</p>
+					</div>
+					<div class="gig" >
+						<p>18.08.2019: Feuerwehrhock, Festhalle Siensbach</p>
+					</div>
+					<div class="gig" >
+						<p>22.09.2019: Niederschopfheim, 11.30 Uhr - 13.30 Uhr</p>
+					</div>
+					<div class="gig" >
+						<p>20.10.2019: Kilbi, Heuweiler 14.30 Uhr - 16.30 Uhr</p>
+					</div>
+					<div class="gig" >
+						<p>16.11.2019: Papiersammlung, Hallenparkplatz 14.00 Uhr</p>
+					</div>
+					<div class="gig" >
+						<p>17.11.2019: Volkstrauertag, Doppelquartett 11.00 Uhr</p>
+					</div>
+					<div class="gig" >
+						<p>15.12.2019: Seniorenadventsfeier, Doppelquartett und Jungmusik</p>
+					</div>
+					<div class="gig" >
+						<p>Dezember 2019: Adventsfenster</p>
+					</div>
+					<div class="gig" >
+						<p>24.12.2019: Kindergrippenfeier, Doppelquartett und Jungmusik</p>
+					</div>
+					<div class="gig marked" >
+						<p>11.01.2020: Generalversammlung, Festhalle Siensbach 18.30 Uhr</p>
+					</div>
+					<div class="gig" >
+						<p>07.03.2020: Jahreshauptversammlung Badischer Blasmusikverband, Festhalle Siensbach</p>
+					</div>
+					<h2>Wir freuen uns auf euer Kommen!</h2>
+					
+					<div class="reference" >
+						<a href="../Terminkalender2019.pdf" download>Hier gibts den Terminkalender auch als pdf</a>
+					</div>
+					
+				</div>
+				
+				<div class="footer" >
+					<div class="music" >
+						<table>
+							<tr>
+								<td class="over" >
+									<h1>Unser Service</h1>
+									<p>Ihr sucht Kapellen für ein Platzkonzert? Schreibt uns gerne an, auch wenn ihr mal gern auf unser Gartenfest kommen möchtet.</p>
+								</td>
+								<td class="contact" >
+									<h1>Kontakt</h1>
+									<p>Bernward Lindinger<br/>Langefurt 11/79183 Waldkirch<br/>0049 / 162 / 62 69 307</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="formally" >
+						<table>
+							<tr>
+								<td class="left" >
+									<ul>
+										<li><a href="../sub/impressum.html" >Impressum</a></li>
+										<li><a href="../sub/datenschutz.html" >Datenschutzerklärung</a></li>
+									</ul>
+								</td>
+								<td class="right" >
+									<a href="#" ><p>&copy;2018 M.Lindinger</p></a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

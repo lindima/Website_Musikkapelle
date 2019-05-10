@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+
+<html lang="en" >
+	<head>
+		
+		<meta charset="utf-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="style_galery.css" type="text/css" >
+		
+		<title>Galerie</title>
+		
+		<script src="../JScript/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			
+				var index = 0;
+				var indexBackup = 0;
+				
+				var canvasWidth = 0.8;	
+				
+				setInterval(function(){
+				
+				while($(window).height() - 100 < $(".canvas").height() && canvasWidth >= 0.2)
+				{
+					canvasWidth -= 0.01;
+					$(".canvas").css("width", canvasWidth * $(window).width());
+				}
+				
+				while($(window).height() > $(".canvas").height() && canvasWidth <= 0.8)
+				{
+					canvasWidth += 0.01;
+					$(".canvas").css("width", canvasWidth * $(window).width());
+				}
+				
+				$(".canvas").css("width", canvasWidth * $(window).width());
+				});
+				
+				var resolutionWidth = window.screen.availWidth;
+				$(".nav_menu").animate({width: 'toggle'}, 200);
+				$(".nav_menu").css("display", "none");
+				$("#0_content").animate({height: 'toggle'}, 1);
+				$("#1_content").animate({height: 'toggle'}, 1);
+				$("#2_content").animate({height: 'toggle'}, 1);
+				$("#3_content").animate({height: 'toggle'}, 1);
+				$("#4_content").animate({height: 'toggle'}, 1);
+				$("#5_content").animate({height: 'toggle'}, 1);
+				
+				var img_array = ["../galery/fasnet.jpg", "../galery/jungmusik.jpeg", "../galery/gruppenbild.jpg", "../galery/heimattage.jpg", "../galery/umzug.jpg", "../galery/vogel.jpg", ];
+				var desc_array = ["Hemdglunkerumzug in Waldkirch 2018", "Ausflug Jungmusik 2019", "Heimattage Waldkirch 2018", "Elzach 2017", "Elzach 2017", "Fronleichnahm Waldkirch 2017"];
+				
+				var index = 0;
+				
+				$("#start").click(function(){
+					window.location.href = '../index.html';
+				});
+				
+				$("#about").click(function(){
+					window.location.href = 'about.html';
+				});
+				
+				$("#gigs").click(function(){
+					window.location.href = 'gigs.html';
+				});
+				
+				$("#contact").click(function(){
+					window.location.href = 'contact.html';
+				});
+				
+				$("#galery").click(function(){
+					window.location.href = 'galery.html';
+				});
+				
+				$("#history").click(function(){
+					window.location.href = 'history.html';
+				});
+				
+				$("#start1").click(function(){
+					window.location.href = '../index.html';
+				});
+				
+				$("#about1").click(function(){
+					window.location.href = 'about.html';
+				});
+				
+				$("#gigs1").click(function(){
+					window.location.href = 'gigs.html';
+				});
+				
+				$("#contact1").click(function(){
+					window.location.href = 'contact.html';
+				});
+				
+				$("#galery1").click(function(){
+					window.location.href = 'galery.html';
+				});
+				
+				$("#history1").click(function(){
+					window.location.href = 'history.html';
+				});
+				
+				$("#menu_icon").click(function(){
+					$(".nav_menu").animate({width: 'toggle'}, 200);
+				});
+				
+				
+				
+				$("#clooose").click(function(){
+					$(".img_view").fadeTo(200, 0, function(){
+						$(".img_view").css("visibility", "hidden");
+					});
+				});
+				
+				$(".image").click(function(){
+					index = $(this).attr('id');
+					$(".img_view").css("visibility", "visible");
+					$(".img_view").fadeTo(200, 1);
+					$(".canvas img").attr('src', img_array[index]);
+					
+					$(".canvas p").text(desc_array[index]);
+				});
+				
+				$("#next").click(function(){
+					$(".canvas img").fadeTo(50, 0, function(){
+					
+						index++;
+						
+						if(index == 6)
+						{
+							index = 0;
+						}
+						$(".canvas img").attr('src', img_array[index]);
+						$(".canvas p").text(desc_array[index]);
+					});
+					
+					$(".canvas img").fadeTo(50, 1)
+				});
+				
+				$("#previous").click(function(){
+					$(".canvas img").fadeTo(50, 0, function(){
+						index--;
+						if(index == -1)
+						{
+							index = 5;
+						}
+						$(".canvas img").attr('src', img_array[index]);
+						$(".canvas p").text(desc_array[index]);
+					});
+					
+					$(".canvas img").fadeTo(50, 1)
+				});
+				
+				
+				
+				
+				$(".image").mouseenter(function(){
+					index = $(this).attr('id');
+					indexBackup = index;
+					index = index + '_content';
+					$('#'+index).animate({opacity: '0.8', height: 'toggle'}, 100);
+					index = indexBackup;
+				});
+				
+				$(".image").mouseleave(function(){
+					index = $(this).attr('id');
+					indexBackup = index;
+					index = index + '_content';
+					$('#'+index).animate({opacity: '0', height: 'toggle'}, 300);
+					index = indexBackup;
+				});
+				
+				
+				
+				
+			});
+		</script>
+		
+	</head>
+	
+	<body style="background-image: url('../images/test8.jpg'); background-attachment: fixed; background-size: cover;" >
+		
+		<div class="navbar" >
+			<ul>
+				<li id="start" class="real" >Startseite</li>
+				<li id="about" class="real" >Über uns</li>
+				<li id="gigs" class="real" >Termine</li>
+				<li id="place" ></li>
+				<li id="contact" class="real" >Kontakt</li>
+				<li id="galery" class="active" >Galerie</li>
+				<li id="history" class="real" >Historie</li>
+			</ul>
+			
+			<div class="nav_menu_icon" id="menu_icon" >
+				<img src="../images/menu.png" alt="menu" /> 
+			</div>
+		</div>
+		
+		<div class="nav_menu" >			
+			<div id="start1" class="link real" >
+				<p>Startseite</p>
+			</div>
+			
+			<div id="about1" class="link real" >
+				<p>Über uns</p>
+			</div>
+			
+			<div id="gigs1" class="link real" >
+				<p>Termine</p>
+			</div>
+			
+			<div id="contact1" class="link real" >
+				<p>Kontakt</p>
+			</div>
+			
+			<div id="galery1" class="link real" >
+				<p>Galerie</p>
+			</div>
+			
+			<div id="history1" class="link real" >
+				<p>Historie</p>
+			</div>
+		</div>
+		
+		<div class="logo" >
+			<img src="../images/logo.png" alt="LOGO" />
+		</div>
+		
+		<div class="wrapper" >
+		
+			<div class="parallax" >
+			</div>
+			
+			<div class="grid_content" >
+				
+				<div class="headline" >
+					<h1>Unsere Kapelle in Bildern</h1>
+				</div>
+				
+				<div id="0" class="image image-1" >
+					<img src="../galery/fasnet.jpg" alt="fasnet" />
+					<div id="0_content" class="item_content" ><p>Hemdglunkerumzug in Waldkirch 2018</p></div>
+				</div>
+				
+				<div id="1" class="image image-2" >
+					<img src="../galery/jungmusik.jpeg" alt="jungmusik" />
+					<div id="1_content" class="item_content" ><p>Ausflug Jungmusik 2019</p></div>
+				</div>
+				
+				<div id="2" class="image image-3" >
+					<img src="../galery/gruppenbild.jpg" alt="gruppenbild" />
+					<div id="2_content" class="item_content" ><p>Heimattage Waldkirch 2018</p></div>
+				</div>
+				
+				<div id="3" class="image image-4" >
+					<img src="../galery/heimattage.jpg" alt="heimattage" />
+					<div id="3_content" class="item_content" ><p>Elzach 2017</p></div>
+				</div>
+				
+				<div id="4" class="image image-5" >
+					<img src="../galery/umzug.jpg" alt="umzug" />
+					<div id="4_content" class="item_content" ><p>Elzach 2017</p></div>
+				</div>
+				
+				<div id="5" class="image image-6" >
+					<img src="../galery/vogel.jpg" alt="vogel" />
+					<div id="5_content" class="item_content" ><p>Fronleichnahm Waldkirch 2017</p></div>
+				</div>
+				
+				<div class="footer" >
+					<div class="music" >
+						<table>
+							<tr>
+								<td class="over" >
+									<h1>Unser Service</h1>
+									<p>Ihr sucht Kapellen für ein Platzkonzert? Schreibt uns gerne an, auch wenn ihr mal gern auf unser Gartenfest kommen möchtet.</p>
+								</td>
+								<td class="contact" >
+									<h1>Kontakt</h1>
+									<p>Bernward Lindinger<br/>Langefurt 11/79183 Waldkirch<br/>0049 / 162 / 62 69 307</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="formally" >
+						<table>
+							<tr>
+								<td class="left" >
+									<ul>
+										<li><a href="../sub/impressum.html" >Impressum</a></li>
+										<li><a href="../sub/datenschutz.html" >Datenschutzerklärung</a></li>
+									</ul>
+								</td>
+								<td class="right" >
+									<a href="#" ><p>&copy;2018 M.Lindinger</p></a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>			
+		</div>
+		
+		<div class="img_view" >
+			<div class="canvas" >
+				<img src="../galery/umzug.jpg" alt="fasnet" />
+				<p>haakjsbvoizsvozsbv</p>
+			</div>
+			
+			<div id="clooose" class="close" >
+				<img src="../images/close.PNG" alt="close" />
+			</div>
+			
+			<div id="next" class="next" >
+				<img src="../images/arrowRight.PNG" alt="arrowRight" />
+			</div>
+			
+			<div id="previous" class="previous" >
+				<img src="../images/arrowLeft.PNG" alt="arrowLeft" />
+			</div>
+		</div>
+			
+	</body>
+</html>

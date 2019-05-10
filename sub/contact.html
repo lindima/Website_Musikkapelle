@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+
+<html lang="en" >
+	<head>
+	
+		<meta charset="utf-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="style_contact.css" type="text/css" >
+		
+		<title>Kontakt</title>
+		
+		<script src="../JScript/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			
+				var resolutionWidth = window.screen.availWidth;
+				$(".nav_menu").animate({width: 'toggle'}, 200);
+				$(".nav_menu").css("display", "none");
+				
+				$("#start").click(function(){
+					window.location.href = '../index.html';
+				});
+				
+				$("#about").click(function(){
+					window.location.href = 'about.html';
+				});
+				
+				$("#gigs").click(function(){
+					window.location.href = 'gigs.html';
+				});
+				
+				$("#contact").click(function(){
+					window.location.href = 'contact.html';
+				});
+				
+				$("#galery").click(function(){
+					window.location.href = 'galery.html';
+				});
+				
+				$("#history").click(function(){
+					window.location.href = 'history.html';
+				});
+				
+				$("#start1").click(function(){
+					window.location.href = '../index.html';
+				});
+				
+				$("#about1").click(function(){
+					window.location.href = 'about.html';
+				});
+				
+				$("#gigs1").click(function(){
+					window.location.href = 'gigs.html';
+				});
+				
+				$("#contact1").click(function(){
+					window.location.href = 'contact.html';
+				});
+				
+				$("#galery1").click(function(){
+					window.location.href = 'galery.html';
+				});
+				
+				$("#history1").click(function(){
+					window.location.href = 'history.html';
+				});
+				
+				$("#menu_icon").click(function(){
+					$(".nav_menu").animate({width: 'toggle'}, 200);
+				});
+			});
+		</script>
+		
+	</head>
+	
+	<body style="background-image: url('../images/test8.jpg'); background-attachment: fixed; background-size: cover;" >
+		
+		<div class="navbar" >
+			<ul>
+				<li id="start" class="real" >Startseite</li>
+				<li id="about" class="real" >Über uns</li>
+				<li id="gigs" class="real" >Termine</li>
+				<li id="place" ></li>
+				<li id="contact" class="active" >Kontakt</li>
+				<li id="galery" class="real" >Galerie</li>
+				<li id="history" class="real" >Historie</li>
+			</ul>
+			
+			<div class="nav_menu_icon" id="menu_icon" >
+				<img src="../images/menu.png" alt="menu" /> 
+			</div>
+		</div>
+		
+		<div class="nav_menu" >			
+			<div id="start1" class="link real" >
+				<p>Startseite</p>
+			</div>
+			
+			<div id="about1" class="link real" >
+				<p>Über uns</p>
+			</div>
+			
+			<div id="gigs1" class="link real" >
+				<p>Termine</p>
+			</div>
+			
+			<div id="contact1" class="link real" >
+				<p>Kontakt</p>
+			</div>
+			
+			<div id="galery1" class="link real" >
+				<p>Galerie</p>
+			</div>
+			
+			<div id="history1" class="link real" >
+				<p>Historie</p>
+			</div>
+		</div>
+		
+		<div class="logo" >
+			<img src="../images/logo.png" alt="LOGO" />
+		</div>
+		
+		<div class="wrapper" >
+			<div class="grid_content" >
+				<div class="information" >
+					<h1>Kontakt</h1>
+					<p>Hast Du Fragen? Kontaktiere uns unter info@musikkapelle-siensbach.de<br/><br/>Wir melden uns so schnell wie möglich zurück.</p>
+				</div>
+				
+				<div class="footer" >
+					<div class="music" >
+						<table>
+							<tr>
+								<td class="over" >
+									<h1>Unser Service</h1>
+									<p>Ihr sucht Kapellen für ein Platzkonzert? Schreibt uns gerne an, auch wenn ihr mal gern auf unser Gartenfest kommen möchtet.</p>
+								</td>
+								<td class="contact" >
+									<h1>Kontakt</h1>
+									<p>Bernward Lindinger<br/>Langefurt 11/79183 Waldkirch<br/>0049 / 162 / 62 69 307</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="formally" >
+						<table>
+							<tr>
+								<td class="left" >
+									<ul>
+										<li><a href="../sub/impressum.html" >Impressum</a></li>
+										<li><a href="../sub/datenschutz.html" >Datenschutzerklärung</a></li>
+									</ul>
+								</td>
+								<td class="right" >
+									<a href="#" ><p>&copy;2018 M.Lindinger</p></a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

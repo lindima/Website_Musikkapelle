@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+	<head>
+		
+		<meta charset="utf-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="style.css" type="text/css" >
+		
+		<title>Musikkapelle Siensbach</title>
+		
+		<script src="JScript/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				
+				$("#place").css("width", "0");
+				
+				var logoOffset = $(".logo").offset();
+				var siteOffset = $(".site").offset();
+				var difference = 0.5 * ((0.4 * $(window).width()) / 1.778);
+				var factor;
+				var limittedFactor;
+				var navbarOpacity;
+				var siteOffsetTop = $(".site").offset().top;
+				var change = 0;
+				var logoWidth;
+				var ie = 0;
+				var ua = window.navigator.userAgent;
+				var msie = ua.indexOf("MSIE ");
+				
+				$(".logo").css("width", (0.4 * $(window).width()));
+				$(".logo").css("position", "fixed");
+				$(".logo").css("margin", "auto");
+				$(".logo").css("left", "0");
+				$(".logo").css("right", "0");
+				$(".logo").css("margin-left", "auto");
+				$(".logo").css("margin-right", "auto");
+				$(".logo").css("top", ($(".wrapper").offset().top - $(window).scrollTop() -difference));
+				$(".nav_menu").animate({width: 'toggle'}, 200);
+				$(".nav_menu").css("display", "none");
+				
+				setInterval(function(){			
+					
+					$(".logo").css("margin", "auto");
+					$(".logo").css("left", "0");
+					$(".logo").css("right", "0");
+					$(".logo").css("margin-left", "auto");
+					$(".logo").css("margin-right", "auto");
+					
+					logoOffset = $(".logo").offset();
+					siteOffset = $(".site").offset();
+					
+					
+					
+					if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
+					{
+						ie = 1;
+					}
+					else  // If another browser, return 0
+					{
+						ie = 0;
+					}
+					
+					
+					
+					
+					
+					if (window.matchMedia('(min-width: 70.001em)').matches && ie == 0)
+					{
+					
+					
+					$(".mainpicture").css("opacity", ((siteOffset.top - $(window).scrollTop()) / siteOffsetTop));
+					
+					if($(".site").offset().top <= $(window).scrollTop())
+					{
+						$(".site").css("position", "fixed");
+						$(".site").css("top", "0");
+					}
+					
+					if($(".wrapper").offset().top > $(window).scrollTop())
+					{
+						$(".site").css("position", "relative");
+					}
+					
+					
+					
+					
+					if(change == 0)
+					{
+						$("#place").css("width", "0");
+						$(".logo").css("width", (0.4 * $(window).width()));
+						
+						if($(".logo").offset().top <= $(window).scrollTop())
+						{
+							$(".logo").css("top", "0");
+							change = 1;
+						}
+						else
+						{
+							$(".logo").css("top", ($(".wrapper").offset().top - $(window).scrollTop() -difference));
+						}
+					}
+					
+					if(change == 1)
+					{
+						$(".logo").css("top", "0");
+						logoWidth = ((($(".wrapper").offset().top - $(window).scrollTop()) / difference) * 0.28) + 0.12;
+						if(logoWidth < 0.12)
+						{
+							logoWidth = 0.12;
+						}
+						$(".logo").css("width", logoWidth * $(window).width());
+						
+						if(logoWidth > 0.4)
+						{
+							$(".logo").css("width", (0.4 * $(window).width()));
+							$(".logo").css("top", ($(".wrapper").offset().top - $(window).scrollTop() -difference));
+							change = 0;
+						}
+						
+						
+						navbarOpacity = 1 - ((siteOffset.top - logoOffset.top)/difference);
+						
+						if(navbarOpacity > 1)
+						{
+							navbarOpacity = 1;
+						}
+						
+						if(navbarOpacity < 0)
+						{
+							navbarOpacity = 0;
+						}
+						
+						navbarOpacity = navbarOpacity * 0.1;
+						
+						$("#place").css("width", navbarOpacity * $(window).width());
+					}
+					}
+					
+					else if(ie == 1)
+					{
+						$("#place").css("width", 0.1 * $(window).width());
+						$(".logo").css("width", (0.2 * $(window).width()));
+						$(".logo").css("top", "0");
+						$(".mainpicture").css("opacity", "1");
+						$(".site").css("position", "fixed");
+						$(".site").css("top", "0");
+						$(".wrapper").css("position", "relative");
+						$(".wrapper").css("top", "0");
+						$(".mainpicture").css("display", "none");
+					}
+					
+					else if (window.matchMedia('(min-width: 35.001em)').matches)
+					{
+						$(".logo").css("width", (0.2 * $(window).width()));
+						$(".logo").css("top", "0");
+						$(".mainpicture").css("opacity", "1");
+					}
+					
+					else
+					{
+						$(".logo").css("width", (0.4 * $(window).width()));
+						$(".logo").css("top", "0");
+						$(".mainpicture").css("opacity", "1");
+					}
+					
+					if($(".wrapper").offset().top > $(window).scrollTop())
+					{
+						$(".site").css("position", "relative");
+					}
+				}, 1);
+				
+				
+				
+				
+				
+				//Elemente aus navBar werden aktiv
+				$("#about").click(function(){
+					window.location.href = 'sub/about.html';
+				});
+				
+				$("#gigs").click(function(){
+					window.location.href = 'sub/gigs.html';
+				});
+				
+				$("#contact").click(function(){
+					window.location.href = 'sub/contact.html';
+				});
+				
+				$(".description td#contactUs").click(function(){
+					window.location.href = 'sub/contact.html';
+				});
+				
+				$("#galery").click(function(){
+					window.location.href = 'sub/galery.html';
+				});
+				
+				$("#history").click(function(){
+					window.location.href = 'sub/history.html';
+				});
+				
+				$("#about1").click(function(){
+					window.location.href = 'sub/about.html';
+				});
+				
+				$("#gigs1").click(function(){
+					window.location.href = 'sub/gigs.html';
+				});
+				
+				$("#contact1").click(function(){
+					window.location.href = 'sub/contact.html';
+				});
+				
+				$("#galery1").click(function(){
+					window.location.href = 'sub/galery.html';
+				});
+				
+				$("#history1").click(function(){
+					window.location.href = 'sub/history.html';
+				});
+				
+				$("#menu_icon").click(function(){
+					$(".nav_menu").animate({width: 'toggle'}, 200);
+				});
+				
+				
+				
+				
+				
+				//Werte werden angepasst, falls Größe des Fensters verändert wird
+				$(window).resize(function(){
+					difference = 0.5 * ((0.4 * $(window).width()) / 1.778);
+					siteOffsetTop = $(".site").offset().top;
+				});
+			});
+			
+		</script>
+	</head>
+	
+	<body>
+	
+		<div class="navbar" >
+			<ul>
+				<li id="start" class="active" >Startseite</li>
+				<li id="about" class="real" >Über uns</li>
+				<li id="gigs" class="real" >Termine</li>
+				<li id="place" ></li>
+				<li id="contact" class="real" >Kontakt</li>
+				<li id="galery" class="real" >Galerie</li>
+				<li id="history" class="real" >Historie</li>
+			</ul>
+			
+			<div class="nav_menu_icon" id="menu_icon" >
+				<img src="images/menu.png" alt="menu" /> 
+			</div>
+		</div>
+		
+		<div class="nav_menu" >			
+			<div id="start1" class="link real" >
+				<p>Startseite</p>
+			</div>
+			
+			<div id="about1" class="link real" >
+				<p>Über uns</p>
+			</div>
+			
+			<div id="gigs1" class="link real" >
+				<p>Termine</p>
+			</div>
+			
+			<div id="contact1" class="link real" >
+				<p>Kontakt</p>
+			</div>
+			
+			<div id="galery1" class="link real" >
+				<p>Galerie</p>
+			</div>
+			
+			<div id="history1" class="link real" >
+				<p>Historie</p>
+			</div>
+		</div>
+		
+		<div class="mainpicture" >
+		</div>
+		
+		<div class="site" >
+		</div>
+		
+		<div class="wrapper" >
+			<div class="logo" >
+				<img src="images/logo.png" alt="LOGO" />
+			</div>
+			
+			<div class="grid_content" >
+				<div class="header" >
+					<p>Herzlich Willkommen auf der Homepage der Musikkapelle Siensbach e.V. !</p>
+				</div>
+				
+				<div class="description" >
+					<p id="desc" >
+						Unser Verein besteht seit 1925, wir sind derzeit knapp 45 aktive Musiker und Musikerinnen. Seit 2015 dirigiert uns Marlon Zickgraf, der Aurel Manciu nach 33 Jahren in unseren Diensten abgelöst hat. Als erster Vorstand und Lieblingsbusfahrer fungiert seit 2012 Bernward Lindinger.<br/> Zu erkennen sind wir an unserer Elztäler Tracht, die wir gerne bei Auftritten im Elztal und Umland tragen.
+					</p>
+					
+					<table>
+						<tr>
+							<td>
+								<p>Ihr habt Fragen?</p>
+							</td>
+							<td id="contactUs" >
+								<p>Kontaktiert uns hier!</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				
+				<div class="achievements" >
+					<h1>Ein kurzer Rückblick auf das, was wir letztes Jahr geschafft haben...</h1>
+					
+					<ul>
+						<li>Disney Konzert im März</li>
+						<li>Unser viertägiges Gartenfest im Juni/Juli</li>
+						<li>Das Doppelkonzert mit den Musikern aus Holland im Oktober</li>
+						<li>Mehrere Veranstaltungen anlässlich der Heimattage in Waldkirch</li>
+						<li>Diverse Platzkonzerte</li>
+					</ul>
+					
+					<p>Wir freuen uns schon auf die Highlights 2019!</p>
+				</div>
+				
+				<div class="event event_unlimited" >
+					<h1>Unlimited Edition</h1>
+					<p>Siensbacher Musiker/innen auf den Brettern, die die Welt bedeuten. Das gibt's sogar unlimited - jede/r ist willkommen!</p>
+				</div>
+				
+				<div class="event event_heimat" >
+					<h1>Unsere Jungmusik</h1>
+					<p>14 Jungen und Mädchen im Alter zwischen 10 und 15 Jahren treffen sich montags zum gemeinsamen Proben. Sie sind mit viel Spaß und großem Engagement dabei.<br/>Nächster Auftritt: 05. Mai</p>
+				</div>
+				
+				<div class="event event_tracht" >
+					<h1>Unsere Tracht</h1>
+					<p>Wir tragen die traditionelle Elztäler Tracht. Außer wir wollen ganz leger sein, dann ziehen wir unser Poloshirt an.</p>
+				</div>
+				
+				<div class="event event_gartenfest" >
+					<h1>Gartenfest</h1>
+					<p>Jedes Jahr am ersten Juliwochenende auf dem Festplatz in der Talbachstraße - Ihr möchtet bei uns auftreten? Kein Problem, kontaktiert uns einfach!</p>
+				</div>
+				
+				<div class="footer" >
+					<div class="music" >
+						<table>
+							<tr>
+								<td class="over" >
+									<h1>Unser Service</h1>
+									<p>Ihr sucht Kapellen für ein Platzkonzert? Schreibt uns gerne an, auch wenn ihr mal gern auf unser Gartenfest kommen möchtet.</p>
+								</td>
+								<td class="contact" >
+									<h1>Kontakt</h1>
+									<p>Bernward Lindinger<br/>Langefurt 11/79183 Waldkirch<br/>0049 / 162 / 62 69 307</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="formally" >
+						<table>
+							<tr>
+								<td class="left" >
+									<ul>
+										<li><a href="sub/impressum.html" >Impressum</a></li>
+										<li><a href="sub/datenschutz.html" >Datenschutzerklärung</a></li>
+									</ul>
+								</td>
+								<td class="right" >
+									<a href="#" ><p>&copy;2018 M.Lindinger</p></a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
