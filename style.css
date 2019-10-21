@@ -326,7 +326,7 @@ body
         box-shadow: 0 0 10px black;
 }
 
-.achievements
+.pending
 {
 	grid-area: achv;
 	margin-left: 0.01vw;
@@ -339,13 +339,14 @@ body
 }
 
 @media screen and (min-width: 35.001em) { 
-.achievements
+.pending
 {
 	padding-left: 5em;
+	padding-right: 5em;
 }
 }
 
-.achievements h1
+.pending h1
 {
 	padding-top: 2vh;
 	font-weight: bold;
@@ -354,20 +355,21 @@ body
 }
 
 @media screen and (min-width: 35.001em) { 
-.achievements h1
+.pending h1
 {
 	font-size: 1.4em;
 }
 }
 
-.achievements ul
+.pending ul
 {
 	margin-top: 2vh;
+	margin-bottom: 2vh;
 	list-style-type: square;
 	padding-left: 2vw;
 }
 
-.achievements li
+.pending li
 {
 	font-family: music-font2, Helvetica, CenturyGothic, Geneva, AppleGothic, sans-serif;
 	color: #c4c4cc;
@@ -376,26 +378,90 @@ body
 }
 
 @media screen and (min-width: 35.001em) { 
-.achievements li
+.pending li
 {
 	font-size: 1.3em;
 }
 }
 
-.achievements p
+.pending p
 {
-	margin-top: 2vh;
+	margin-top: 1vh;
 	font-family: music-font2, Helvetica, CenturyGothic, Geneva, AppleGothic, sans-serif;
 	color: #c4c4cc;
 	font-size: 1em;
 	font-weight: bold;
-	padding-bottom: 2vh;
 }
 
 @media screen and (min-width: 35.001em) { 
-.achievements p
+.pending p
 {
 	font-size: 1.3em;
+}
+}
+
+.pending1
+{
+	grid-area: pndg1;
+	text-align: center;
+	padding-top: 2vh;
+}
+
+.pending1 img
+{
+	width: 50%;
+	border: black solid 2px;
+	-webkit-box-shadow: 0 0 10px #aaa;
+        box-shadow: 0 0 100px #aaa;
+}
+
+/*.pending2
+{
+	grid-area: pndg2;
+	text-align: center;
+}
+
+.pending2 img
+{
+	width: 100%;
+	border: black solid 2px;
+	-webkit-box-shadow: 0 0 10px #aaa;
+        box-shadow: 0 0 100px #aaa;
+}*/
+
+.grid_pending
+{	
+	padding-top: 0em;
+	padding-bottom: 0em;
+	
+	grid-area: grid_pending;
+	display: grid;
+	margin: 0;
+	grid-template-columns: 0em 1fr 0em;
+	grid-template-row: 1fr;
+	grid-column-gap: 2em;
+	grid-row-gap: 0em;
+	grid-template-areas: 
+		". pndg1 ."
+	;
+}
+
+@media screen and (min-width: 70.001em) { 
+.grid_pending
+{	
+	padding-top: 1em;
+	padding-bottom: 1em;
+	
+	grid-area: grid_pending;
+	display: grid;
+	margin: 0;
+	grid-template-columns: 5em 1fr 5em;
+	grid-template-row: 1fr;
+	grid-column-gap: 5em;
+	grid-row-gap: 0em;
+	grid-template-areas: 
+		". pndg1 ."
+	;
 }
 }
 
