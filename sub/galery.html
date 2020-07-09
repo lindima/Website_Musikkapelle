@@ -46,9 +46,14 @@
 				$("#3_content").animate({height: 'toggle'}, 1);
 				$("#4_content").animate({height: 'toggle'}, 1);
 				$("#5_content").animate({height: 'toggle'}, 1);
+				$("#6_content").animate({height: 'toggle'}, 1);
+				$("#7_content").animate({height: 'toggle'}, 1);
+				$("#8_content").animate({height: 'toggle'}, 1);
+				$("#9_content").animate({height: 'toggle'}, 1);
+				$("#10_content").animate({height: 'toggle'}, 1);
 				
-				var img_array = ["../galery/fasnet.jpg", "../galery/jungmusik.jpeg", "../galery/gruppenbild.jpg", "../galery/heimattage.jpg", "../galery/umzug.jpg", "../galery/vogel.jpg", ];
-				var desc_array = ["Hemdglunkerumzug in Waldkirch 2018", "Ausflug Jungmusik 2019", "Heimattage Waldkirch 2018", "Elzach 2017", "Elzach 2017", "Fronleichnahm Waldkirch 2017"];
+				var img_array = ["../galery/fasnet.jpg", "../galery/jungmusik.jpeg", "../galery/gruppenbild.jpg", "../galery/heimattage.jpg", "../galery/umzug.jpg", "../galery/vogel.jpg", "../galery/gartenfest1.jpg", "../galery/gartenfest2.jpg", "../galery/gartenfest3.jpg", "../galery/gartenfest5.jpg", "../galery/gartenfest4.jpg"];
+				var desc_array = ["Hemdglunkerumzug in Waldkirch 2018", "Ausflug Jungmusik 2019", "Heimattage Waldkirch 2018", "Elzach 2017", "Elzach 2017", "Fronleichnahm Waldkirch 2017", "Unsere Neuzugänge an der Posaune", "Die Musiker richten sich", "Kleine Verpflegung für hinterher", "Mitten in der Probe", "Viel Holz"];
 				
 				var index = 0;
 				
@@ -126,7 +131,7 @@
 					
 						index++;
 						
-						if(index == 6)
+						if(index == 11)
 						{
 							index = 0;
 						}
@@ -142,7 +147,7 @@
 						index--;
 						if(index == -1)
 						{
-							index = 5;
+							index = 10;
 						}
 						$(".canvas img").attr('src', img_array[index]);
 						$(".canvas p").text(desc_array[index]);
@@ -252,10 +257,6 @@
 					<div id="2_content" class="item_content" ><p>Heimattage Waldkirch 2018</p></div>
 				</div>
 				
-				<!-- <div class="headline2" > -->
-					<!-- <h1>Unser Gartenfest</h1> -->
-				<!-- </div> -->
-				
 				<div id="3" class="image image-4" >
 					<img src="../galery/heimattage.jpg" alt="heimattage" />
 					<div id="3_content" class="item_content" ><p>Elzach 2017</p></div>
@@ -271,6 +272,35 @@
 					<div id="5_content" class="item_content" ><p>Fronleichnahm Waldkirch 2017</p></div>
 				</div>
 				
+				<div class="headline2" >
+					<h1>Unsere erste Probe nach Corona am 5.7.2020 auf der Festwiese - anläßlich des abgesagten Gartenfestes, das an diesem Sonntag stattgefunden hätte.</h1>
+				</div>
+				
+				<div id="6" class="image image-7" >
+					<img src="../galery/gartenfest1.jpg" alt="gartenfest1" />
+					<div id="6_content" class="item_content" ><p>Unsere Neuzugänge an der Posaune</p></div>
+				</div>
+				
+				<div id="7" class="image image-8" >
+					<img src="../galery/gartenfest2.jpg" alt="gartenfest2" />
+					<div id="7_content" class="item_content" ><p>Die Musiker richten sich</p></div>
+				</div>
+				
+				<div id="8" class="image image-9" >
+					<img src="../galery/gartenfest3.jpg" alt="gartenfest3" />
+					<div id="8_content" class="item_content" ><p>Kleine Verpflegung für hinterher</p></div>
+				</div>
+				
+				<div id="9" class="image image-10" >
+					<img src="../galery/gartenfest5.jpg" alt="gartenfest5" />
+					<div id="9_content" class="item_content" ><p>Mitten in der Probe</p></div>
+				</div>
+				
+				<div id="10" class="image image-11" >
+					<img src="../galery/gartenfest4.jpg" alt="gartenfest4" />
+					<div id="10_content" class="item_content" ><p>Viel Holz</p></div>
+				</div>
+				
 				<div class="footer" >
 					<div class="music" >
 						<table>
@@ -281,7 +311,7 @@
 								</td>
 								<td class="contact" >
 									<h1>Kontakt</h1>
-									<p>Bernward Lindinger<br/>Langefurt 11/79183 Waldkirch<br/>0049 / 162 / 62 69 307</p>
+									<p>Bernward Lindinger<br/>Langefurt 11/79183 Waldkirch<br/>0049 / 162 / 62 69 307</br>0049 / 7681 / 49 13 49</p>
 								</td>
 							</tr>
 						</table>

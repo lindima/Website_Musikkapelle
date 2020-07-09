@@ -282,6 +282,7 @@
 .pending p
 {
 	margin-top: 1vh;
+	margin-bottom: 5vh;
 	font-family: music-font2, Helvetica, CenturyGothic, Geneva, AppleGothic, sans-serif;
 	color: #c4c4cc;
 	font-size: 1em;
