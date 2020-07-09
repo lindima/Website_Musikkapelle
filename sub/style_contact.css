@@ -244,6 +244,44 @@
 	font-weight: bold;
 }
 
+.reference
+{
+	grid-area: ref;
+	margin: auto;
+	margin-top: 4vh;
+	margin-bottom: 4vh;
+	padding: 2%;
+	text-align: center;
+	width: 60%;
+	border: 2px solid #B40404;
+	border-radius: 5px;
+	transition: all 0.2s;
+	-webkit-box-shadow: 0 0 5px #fff;
+        box-shadow: 0 0 5px black;
+}
+
+.reference:hover
+{
+	background-color: #F2F2F2;
+	-webkit-box-shadow: 0 0 10px #fff;
+        box-shadow: 0 0 10px black;
+}
+
+.reference a
+{
+	font-size: 1.5em;
+	font-family: music-font2, Helvetica, CenturyGothic, Geneva, AppleGothic, sans-serif;
+	text-decoration: none;
+	color: black;
+}
+
+@media screen and (min-width: 35.001em) {
+.reference a
+{
+	font-size: 1.7em;
+}
+}
+
 .footer
 {
 	grid-area: foot;
@@ -369,6 +407,7 @@
 	grid-row-gap: 0px;
 	grid-template-areas:
 		"info info info info info"
+		"ref ref ref ref ref"
 		"foot foot foot foot foot"
 }
 
