@@ -259,6 +259,7 @@
 .pending ul
 {
 	margin-top: 2vh;
+	text-align: left;
 	margin-bottom: 2vh;
 	list-style-type: square;
 	padding-left: 2vw;
